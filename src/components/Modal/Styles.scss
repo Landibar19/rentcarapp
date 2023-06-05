@@ -1,0 +1,139 @@
+@import '../styles/Styles.scss';
+
+.modal{
+    position: fixed;
+    padding-left: 40px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+
+    &_full{
+        position: fixed;
+        display: block;
+        top:0;
+        right:5%;
+        width: 90%;
+        height:27rem;
+        margin-top: 70px;
+        background-color: beige;
+        overflow-y:scroll;
+        overflow-x: hidden;
+        scroll-behavior:auto;
+       
+    }
+    &_reservation{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 100%;
+        height: 60px;
+        padding: 5px;
+        padding-top: 0;
+        background-color: rgb(8, 247, 167,0.2);
+    }
+    &_button{
+        position: absolute;
+        top:0;
+        right: 0;
+    }
+    svg{
+        color:white;
+        background-color: red;
+        font-size: larger;
+        font-weight: bold;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+
+    &_reservation_done{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0;
+        padding: 0;
+    }
+    h2{
+        padding: 10px;
+    }
+    h3{
+        padding: 10px;
+    }
+
+    p{
+        color: black;
+        font-weight: 500;
+    }
+
+    &_form{
+        display: flex;
+        flex-direction:column;
+        justify-content:center
+        
+
+    }
+
+    &_book_form{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        div{
+            width:300px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        label{
+           max-width: 200px;
+           padding:2px
+        }
+        p{
+            max-width: 200px;
+        }
+        
+    }
+
+    &_book_photo{
+        img{
+            width: 400px;
+            height: 270px;
+            border-radius: 4px;
+        }
+    }
+    button{
+        margin-bottom: 20px;
+    }
+    
+
+    @include largeScreen{
+        &_form{
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            div{  
+            align-items: flex-start;
+            flex-direction: column;
+            }
+        }
+
+        &_book_form{
+            align-items: flex-start;
+        }
+    }
+}
+
+
+.reservation{
+    background-color: rgb(140, 242, 140);
+    margin-top: 10%;
+    width: 100%;
+    height: 35vh;
+    color: green;
+    }

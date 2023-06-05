@@ -1,0 +1,86 @@
+@import '../../components//styles/Styles.scss';
+
+
+.personal{
+
+   .personal_info{
+    width: 100%;
+    max-width: auto;
+    padding-top:5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+    &_form{
+        width: 150vh;
+        display: grid;
+        grid-template-columns: 0.5fr ;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        gap: 20px;
+        padding: 5px;
+    }  
+    &_item{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &_country{
+        margin-top: 25px;
+        width:200px;
+        height: 35px;
+        border-color: black;
+        border-style: solid;
+        border-width: 2px;
+    }
+
+    h3{
+        font-size: xx-large;
+        font-weight: 700;
+        padding-bottom: 20px;
+    }
+
+    label{
+        color: rgb(9, 9, 9,0.8);
+        font-size: larger;
+        font-weight: 500;
+    }
+
+    input{
+        max-width: 200px;
+        height: 35px;
+        border-width: 2px;
+        border-style: solid;
+        border-color: black;
+
+        &::placeholder{
+            padding-left: 5px;
+        }
+    }
+
+    button{
+        background-color: rgb(192, 192, 245);
+        color: rgb(45, 44, 44);
+        cursor: pointer;
+        &:hover{
+            background-color: white;
+            color:rgb(4, 133, 54);
+            transition-duration: 1s;
+        }
+    }
+
+    @include largeScreen{
+        &_form{
+            max-width: 150vh;
+            display: grid;
+            grid-template-columns: 0.5fr 0.5fr 0.5fr ;
+           
+        }  
+    }
+
+} 
+}
+

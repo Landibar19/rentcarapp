@@ -1,0 +1,94 @@
+@import '../../components//styles//Styles.scss';
+
+.vehicle{
+    width: auto;
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 0;
+
+    &_title{
+        width:80%;
+        display: flex;
+        text-align: left;
+        flex-direction: column;
+        margin: 0;
+        padding: 20px;
+        height: auto;
+       
+    }
+    h1{
+        font-size:50px;
+    }
+    &_container{
+        display: block;
+      
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        padding: 20px;
+       
+    }
+    &_item{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height:auto;
+        border-width: 1px;
+        border-style: solid;
+        margin-top:30px ;
+        img{
+            width: 300px;
+            height: 200px;
+        }
+        svg{
+            color: rgb(213, 169, 37);
+        }
+        &_data{
+            width:280px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        &_props{
+            width:100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3px;
+        }
+        span{
+            font-size: large;
+            font-weight:bold;
+            color: grey;
+        }
+        button{
+            width: 130px;
+            height: 30px;
+            padding: 5px;
+            background-color: red;
+            margin: 5px;
+            color: white;
+            border-radius: 4px;
+            font-weight: 700;
+            cursor: pointer;
+            &:hover{
+                background-color: rgb(127, 6, 6);
+                transition-duration: 0.3s;
+            }
+            
+        }
+    }
+
+    @include largeScreen{
+        &_container{
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+             gap: 20px;
+        }
+    }
+}

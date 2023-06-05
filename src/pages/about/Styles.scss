@@ -1,0 +1,59 @@
+.about{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    text-align: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 50px;
+
+    &_us{
+        width: 50rem;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    &_choose_us{
+        width: 50rem;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    &_maps{
+        margin-top: 30px;
+    }
+
+    h5{
+        font-size: 30px;
+    }
+
+    p{
+        width:50rem;
+        display: flex;
+        align-items: flex-start;
+        line-height: 150%;
+        text-align: start;
+    }
+
+    img{
+        width: 500px;
+        height: 300px;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    &_cars{
+        width:50rem;
+        display: flex;
+        align-items: flex-start;
+        line-height: 150%;
+        padding-top: 20px;
+        text-align: start;
+    }
+
+}

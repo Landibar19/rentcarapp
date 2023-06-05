@@ -1,0 +1,185 @@
+@import '../../styles/Styles.scss';
+
+.header{
+    width: 100%;
+    height: 60px;
+    color: rgb(71, 23, 23);
+    position: absolute;
+    z-index: 1000;
+
+    &_logo{
+        :link{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            color: rgb(111, 15, 15);
+            text-decoration: none;
+            img{
+            width: 50px;
+            height: 40px;
+            border-radius: 100%;
+            
+            }
+        }
+    }
+
+    &_content{
+        max-width: 200vh;
+        margin: 0 auto;
+        padding:0; 
+        transition: 0.3s ease padding;
+        display: flex;
+        height: 100%;
+        align-items:center;
+
+         & > div {
+            display: flex;
+            margin:0;
+            padding: 0;
+           
+           
+             &:nth-child(2){
+                width:100%;
+                display: flex;
+                justify-content:flex-end;
+                height: 100%;                
+            }
+
+            &:last-of-type {
+                margin: 0;
+                display: flex;
+                justify-content: flex-end;      
+            }
+        }
+    }
+    &_logo{
+        position: absolute;
+        top:5px;
+        left: 15px;
+       
+    }
+    img {
+        width: 70px;
+        border-radius: 50%;
+    }
+    &_button{
+        display: block;
+        position: fixed;
+        top:6%;
+        @include largeScreen{
+            display: none
+        }
+    }
+    &_toggler{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:rgb(22, 20, 20);
+        color: white;
+        cursor: pointer;
+        border: none;
+        @include largeScreen{
+            display: none;
+        }
+        & > svg{
+            display: block;
+            font-size: 32px;
+        }
+    }
+    &_call{
+        svg{
+            color: rgb(235, 241, 235);
+            width: 30px;
+            font-weight: 800;
+            background-color: green;
+            border-radius: 100%;
+        }
+    }
+}
+
+
+
+.nav{
+    width: 50%;
+    max-width: 50%;
+    position: fixed;
+    top:10% ;
+    align-items:center;
+    justify-content: flex-end;
+    background-color: rgb(101, 101, 243);
+    text-align: center;
+    display: none;
+   
+   
+   @-webkit-keyframes fadeIn {
+    from { top:-10% }
+    to { top:10%; }
+   }
+   
+   @keyframes fadeIn {
+        from {top:-10% }
+        to { top:10%; }
+    }
+
+    &--open{
+        transition:1s ease top ;
+        transition-duration: 3s;
+        top: 10%;
+        left: 0;
+        display: block;
+        animation: fadeIn 0.5s;
+    }
+
+    &_item{
+        display: block;
+        padding: 10px 0px 10px 0px;
+        text-decoration: none;
+        color:rgb(9, 9, 9);
+        height: 100%;
+        font-family: 'Trebuchet MS',
+         'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size:large;
+        border-bottom: 1px;
+        border-style: solid;
+        border-color: rgb(32, 32, 32);
+        transition: 0.3 ease color;
+        &:hover{
+            color: rgb(91, 5, 5);
+            text-decoration: underline;
+            
+        }
+        &_header{
+            cursor: pointer;
+            font-weight: 500;
+        }
+    }
+    
+
+    @include largeScreen {
+        width: auto;
+        padding: 10px;
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        background-color: initial;
+        
+
+        &_item{
+            width: 100%;
+            padding: 0 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(12, 12, 12);
+            border: none;
+            margin: auto;
+        }
+        
+    }
+}
+
+
+
+  
+    
+
